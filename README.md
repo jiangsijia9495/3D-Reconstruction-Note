@@ -28,7 +28,7 @@
 -----
 If a surface S is given implicitly as the set of points (x,y,z) satisfying  F(x,y,z)=0 , then a normal at a point (x,y,z) on the surface is given by the gradient
 
-n = &delta;F(x,y,z)
+n = &Delta;F(x,y,z)
 
 since the gradient at any point is perpendicular to the level set S.
 
