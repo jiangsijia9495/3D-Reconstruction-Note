@@ -26,10 +26,11 @@
 - [Dataset](#dataset)
 
 -----
-If a surface {\displaystyle S}S is given implicitly as the set of points {\displaystyle (x,y,z)}(x,y,z) satisfying {\displaystyle F(x,y,z)=0,}{\displaystyle F(x,y,z)=0,} then a normal at a point {\displaystyle (x,y,z)}(x,y,z) on the surface is given by the gradient
+If a surface S is given implicitly as the set of points (x,y,z) satisfying  F(x,y,z)=0 , then a normal at a point (x,y,z) on the surface is given by the gradient
 
-{\displaystyle \mathbf {n} =\nabla F(x,y,z).}{\displaystyle \mathbf {n} =\nabla F(x,y,z).}
-since the gradient at any point is perpendicular to the level set {\displaystyle S.}S.
+n = &delta;F(x,y,z)
+
+since the gradient at any point is perpendicular to the level set S.
 
 ## Body Model
 
