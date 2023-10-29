@@ -31,7 +31,7 @@ from optimization.utils import at_to_transform_matrix, qt_to_transform_matrix, m
 class CoSLAM():
     def __init__(self, config):
         self.config = config
-        self.device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.dataset = get_dataset(config)
         
         self.create_bounds()
@@ -659,7 +659,7 @@ class CoSLAM():
 
         cur_rot, cur_trans, pose_optimizer = self.get_pose_param_optim(cur_c2w[None,...], mapping=False)
 
-        self.model.eval()
+        # self.model.eval()
 
         # Start tracking
         for i in range(self.config['tracking']['iter']):
@@ -706,8 +706,6 @@ class CoSLAM():
 
             loss.backward()
             pose_optimizer.step()
-
-        self.model.train()
         
         if self.config['tracking']['best']:
             # Use the pose with smallest loss
